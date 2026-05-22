@@ -60,6 +60,17 @@ button,
 		transform 0.22s ease;
 }
 
+section {
+	scroll-margin-top: 100px;
+}
+
+button,
+a,
+.spec-card,
+input {
+	-webkit-tap-highlight-color: transparent;
+}
+
 .site-header {
 	position: sticky;
 	top: 0;
