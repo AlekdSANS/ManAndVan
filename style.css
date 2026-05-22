@@ -392,6 +392,10 @@ h3 {
 	font-weight: 950;
 }
 
+.hero-content strong {
+	font-size: clamp(2.4rem, 3.9vw, 3rem);
+}
+
 .hero-subtitle {
 	margin: 0 0 18px;
 	font-size: clamp(1.35rem, 3vw, 2.1rem);
@@ -529,8 +533,9 @@ h3 {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	gap: 18px;
-	border-top: 1px solid var(--border-soft);
-	border-bottom: 1px solid var(--border-soft);
+	border-top: 3px solid var(--border-soft);
+	border-bottom: 3px solid var(--border-soft);
+	border-radius: 6px;
 }
 
 .service-strip article,
@@ -597,6 +602,8 @@ h3 {
 	grid-template-columns: minmax(0, 0.78fr) minmax(360px, 1.22fr);
 	gap: 34px;
 	align-items: start;
+	border-top: 2px solid var(--border-soft);
+	border-radius: 6px;
 }
 
 .spec-grid {
@@ -745,6 +752,8 @@ h3 {
 	display: grid;
 	grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
 	gap: 20px;
+	border-bottom: 3px solid var(--border-soft);
+	border-radius: 6px;
 }
 
 .contact-grid {
@@ -783,7 +792,7 @@ h3 {
 
 .address-note {
 	padding-top: 20px;
-	border-top: 1px solid rgba(0, 0, 0, 0.16);
+	border-top: 3px solid rgba(0, 0, 0, 0.16);
 }
 
 .site-footer {
@@ -793,7 +802,8 @@ h3 {
 	display: flex;
 	justify-content: space-between;
 	gap: 16px;
-	border-top: 1px solid var(--border-soft);
+	border-top: 3px solid var(--border-soft);
+	border-radius: 12px;
 	color: var(--muted);
 }
 
@@ -933,6 +943,10 @@ h3 {
 	.hero-visual {
 		min-height: 470px;
 	}
+
+	.hero-content strong {
+		font-size: clamp(2.5rem, 8vw, 5rem);
+	}
 }
 
 @media (max-width: 620px) {
@@ -1032,6 +1046,10 @@ h3 {
 
 	.hero-visual {
 		min-height: 390px;
+	}
+
+	.hero-content strong {
+		font-size: clamp(2.8rem, 5.5vw, 6rem);
 	}
 
 	.flag {
