@@ -3,27 +3,28 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>TransRent Auto | Arenda aut do transportu</title>
+		<title>MAN &amp; VAN | Przeprowadzki Wrocław</title>
 		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
 		<header class="site-header">
-			<nav class="navbar" aria-label="Glowna nawigacja">
+			<nav class="navbar" aria-label="Główna nawigacja">
 				<a class="brand" href="#start">
-					<span class="brand-mark">TR</span>
-					<span>TransRent Auto</span>
+					<span>MAN</span>
+					<strong>&amp;</strong>
+					<span>VAN</span>
 				</a>
 
 				<input
 					class="nav-toggle"
 					type="checkbox"
 					id="nav-toggle"
-					aria-label="Otworz menu"
+					aria-label="Otwórz menu"
 				/>
 				<label
 					class="nav-toggle-button"
 					for="nav-toggle"
-					aria-label="Otworz menu"
+					aria-label="Otwórz menu"
 				>
 					<span></span>
 					<span></span>
@@ -31,22 +32,23 @@
 				</label>
 
 				<div class="nav-links">
-					<a href="#flota">Flota</a>
-					<a href="#oferta">Oferta</a>
-					<a href="#proces">Proces</a>
+					<a href="#uslugi">Usługi</a>
+					<a href="#pojazd">Pojazd</a>
+					<a href="#zasieg">Zasięg</a>
 					<a href="#kontakt">Kontakt</a>
 				</div>
 
 				<div class="nav-controls" aria-label="Ustawienia strony">
-					<div class="language-switcher" aria-label="Przelacznik jezyka">
+					<div class="language-switcher" aria-label="Przełącznik języka">
 						<button type="button" class="active">PL</button>
 						<button type="button">EN</button>
 						<button type="button">RU</button>
+						<button type="button">CZ</button>
 					</div>
 					<button
 						class="theme-toggle"
 						type="button"
-						aria-label="Przelacznik trybu jasnego i ciemnego"
+						aria-label="Przełącznik trybu jasnego i ciemnego"
 					>
 						<span></span>
 					</button>
@@ -57,145 +59,109 @@
 		<main id="start">
 			<section class="hero section">
 				<div class="hero-content">
-					<p class="eyebrow">Wynajem aut dostawczych i transportowych</p>
+					<p class="eyebrow">Wrocław i okolice</p>
 					<h1>
-						Arenda aut do transportu wtedy, kiedy biznes musi ruszyc od razu.
+						<span>MAN &amp; VAN</span>
+						<strong>Przeprowadzki</strong>
 					</h1>
+					<p class="hero-subtitle">Na terenie Polski i Czech</p>
 					<p class="hero-text">
-						Elastyczny wynajem samochodow do przewozu towarow, przeprowadzek i
-						codziennych tras firmowych. Proste warunki, sprawna obsluga i flota
-						gotowa do pracy.
+						Transport mebli i rzeczy prywatnych oraz firmowych. Bezpiecznie,
+						na czas i z elastycznym terminem, także z możliwością rezerwacji
+						tego samego dnia.
 					</p>
 					<div class="hero-actions">
-						<a class="btn primary" href="#kontakt">Zapytaj o auto</a>
-						<a class="btn secondary" href="#flota">Zobacz flote</a>
+						<a class="btn primary" href="tel:+48515472469">Zadzwoń PL</a>
+						<a class="btn secondary" href="tel:+420608699300">Zadzwoń CZ</a>
 					</div>
 				</div>
 
-				<div class="hero-panel" aria-label="Najwazniejsze informacje">
-					<div>
-						<strong>24/7</strong>
-						<span>mozliwy odbior</span>
+				<div class="hero-visual" aria-label="Wizualizacja auta dostawczego">
+					<div class="payload-badge">
+						<span class="weight-icon"></span>
+						<p>Ładowność</p>
+						<strong>1200 kg</strong>
 					</div>
-					<div>
-						<strong>3.5 t</strong>
-						<span>busy i furgony</span>
-					</div>
-					<div>
-						<strong>PL / EU</strong>
-						<span>trasy lokalne i miedzynarodowe</span>
-					</div>
-				</div>
-			</section>
-
-			<section class="section intro">
-				<div class="section-heading">
-					<p class="eyebrow">Dla firm i osob prywatnych</p>
-					<h2>Samochod dopasowany do ladunku, terminu i trasy.</h2>
-				</div>
-				<p>
-					Pomagamy wybrac auto pod realne zadanie: od malego vana po pojemny
-					samochod dostawczy. Wynajem moze byc krotki, tygodniowy lub dluzszy, z
-					jasnym rozliczeniem i szybkim kontaktem.
-				</p>
-			</section>
-
-			<section class="section fleet" id="flota">
-				<div class="section-heading">
-					<p class="eyebrow">Nasza flota</p>
-					<h2>Praktyczne auta do transportu</h2>
-				</div>
-
-				<div class="fleet-grid">
-					<article class="fleet-card">
-						<div class="vehicle-icon">VAN</div>
-						<h3>Vany miejskie</h3>
-						<p>
-							Zwrotne auta do szybkich dostaw, serwisu i przewozu mniejszych
-							ladunkow.
-						</p>
-					</article>
-					<article class="fleet-card">
-						<div class="vehicle-icon">L3H2</div>
-						<h3>Furgony dostawcze</h3>
-						<p>
-							Pojemne samochody do przeprowadzek, palet i regularnych tras
-							firmowych.
-						</p>
-					</article>
-					<article class="fleet-card">
-						<div class="vehicle-icon">BOX</div>
-						<h3>Kontenery</h3>
-						<p>
-							Rozwiazanie dla ladunkow wymagajacych wiekszej przestrzeni i
-							latwego zaladunku.
-						</p>
-					</article>
-				</div>
-			</section>
-
-			<section class="section offer" id="oferta">
-				<div class="section-heading">
-					<p class="eyebrow">Oferta</p>
-					<h2>Warunki wynajmu bez komplikacji</h2>
-				</div>
-
-				<div class="offer-list">
-					<div class="offer-item">
-						<span>01</span>
-						<div>
-							<h3>Krotki i dlugi termin</h3>
-							<p>
-								Wynajem na jeden dzien, kilka tygodni albo stale wsparcie dla
-								firmy.
-							</p>
+					<div class="city-line"></div>
+					<div class="truck">
+						<div class="truck-cab"></div>
+						<div class="truck-box">
+							<strong>MAN &amp; VAN</strong>
+							<span>PRZEPROWADZKI</span>
+							<div class="truck-stripe"></div>
+							<div class="flag-row">
+								<span class="flag flag-pl"></span>
+								<span class="route-arrow">↔</span>
+								<span class="flag flag-cz"></span>
+							</div>
 						</div>
-					</div>
-					<div class="offer-item">
-						<span>02</span>
-						<div>
-							<h3>Jasna cena</h3>
-							<p>
-								Stawka ustalana przed rezerwacja, z informacja o limicie
-								kilometrow i kaucji.
-							</p>
-						</div>
-					</div>
-					<div class="offer-item">
-						<span>03</span>
-						<div>
-							<h3>Wsparcie w trasie</h3>
-							<p>
-								Szybki kontakt w razie pytan, zmiany planu lub potrzeby
-								przedluzenia wynajmu.
-							</p>
-						</div>
+						<div class="wheel wheel-left"></div>
+						<div class="wheel wheel-right"></div>
 					</div>
 				</div>
 			</section>
 
-			<section class="section process" id="proces">
-				<div class="section-heading">
-					<p class="eyebrow">Jak to dziala</p>
-					<h2>Rezerwacja w trzech krokach</h2>
-				</div>
+			<section class="section service-strip" id="uslugi">
+				<article>
+					<span class="round-icon">▣</span>
+					<h2>Transport mebli i rzeczy</h2>
+					<p>Prywatne i firmowe przeprowadzki, przewóz wyposażenia oraz rzeczy osobistych.</p>
+				</article>
+				<article>
+					<span class="round-icon">✓</span>
+					<h2>Bezpiecznie i na czas</h2>
+					<p>Przejrzysta organizacja transportu i punktualna realizacja zlecenia.</p>
+				</article>
+				<article>
+					<span class="round-icon">◷</span>
+					<h2>Elastyczne terminy</h2>
+					<p>Możliwość szybkiej rezerwacji, również tego samego dnia.</p>
+				</article>
+			</section>
 
-				<div class="steps">
-					<div class="step">
-						<span>1</span>
-						<h3>Opisz transport</h3>
-						<p>Podaj termin, trase i rodzaj ladunku.</p>
+			<section class="section vehicle-section" id="pojazd">
+				<div class="section-heading">
+					<p class="eyebrow">Pojazd</p>
+					<h2>Citroën Jumper skrzynia z plandeką</h2>
+				</div>
+				<div class="spec-grid">
+					<div class="spec-card">
+						<span>Model</span>
+						<strong>Citroën Jumper</strong>
 					</div>
-					<div class="step">
-						<span>2</span>
-						<h3>Dobierzemy auto</h3>
-						<p>Proponujemy odpowiedni model i warunki.</p>
+					<div class="spec-card">
+						<span>Zabudowa</span>
+						<strong>Skrzynia z plandeką</strong>
 					</div>
-					<div class="step">
-						<span>3</span>
-						<h3>Odbierz klucze</h3>
-						<p>Auto jest przygotowane do pracy.</p>
+					<div class="spec-card highlight">
+						<span>Ładowność</span>
+						<strong>1200 kg</strong>
 					</div>
+				</div>
+			</section>
+
+			<section class="section area-section" id="zasieg">
+				<div class="area-card">
+					<p class="eyebrow">Zasięg transportu</p>
+					<h2>Wrocław i okolice do około 200 km</h2>
+					<p>
+						Obsługujemy przeprowadzki i transport rzeczy na trasach lokalnych
+						oraz między Polską i Czechami.
+					</p>
+					<div class="flag-row large">
+						<span class="flag flag-pl"></span>
+						<span class="route-arrow">↔</span>
+						<span class="flag flag-cz"></span>
+					</div>
+				</div>
+				<div class="language-card">
+					<p class="eyebrow">Mówimy po</p>
+					<ul>
+						<li>Polsku</li>
+						<li>Angielsku</li>
+						<li>Rosyjsku</li>
+						<li>Czesku</li>
+					</ul>
 				</div>
 			</section>
 
@@ -203,41 +169,36 @@
 				<div class="contact-card">
 					<div class="section-heading">
 						<p class="eyebrow">Kontakt</p>
-						<h2>Zapytaj o dostepnosc auta</h2>
+						<h2>Zarezerwuj transport lub zapytaj o termin</h2>
 					</div>
-
 					<div class="contact-grid">
 						<div>
-							<h3>Telefon</h3>
-							<a href="tel:+48123456789">+48 123 456 789</a>
+							<h3>Telefon Polska</h3>
+							<a href="tel:+48515472469">+48 515 472 469</a>
+						</div>
+						<div>
+							<h3>Telefon Czechy</h3>
+							<a href="tel:+420608699300">+420 608 699 300</a>
 						</div>
 						<div>
 							<h3>E-mail</h3>
-							<a href="mailto:kontakt@transrent-auto.pl"
-								>kontakt@transrent-auto.pl</a
-							>
-						</div>
-						<div>
-							<h3>Godziny</h3>
-							<p>Pon-Pt: 8:00-18:00<br />Sob: 9:00-14:00</p>
+							<a href="mailto:stan@arch-special.com">stan@arch-special.com</a>
 						</div>
 					</div>
 				</div>
 
-				<aside class="address-card" aria-label="Adres firmy">
-					<p class="eyebrow">Adres</p>
-					<h2>TransRent Auto</h2>
-					<p>ul. Transportowa 12<br />00-001 Warszawa, Polska</p>
-					<p class="address-note">
-						Odbior auta po wczesniejszej rezerwacji telefonicznej.
-					</p>
+				<aside class="address-card" aria-label="Lokalizacja firmy">
+					<p class="eyebrow">Lokalizacja</p>
+					<h2>Wrocław i okolice</h2>
+					<p>Możliwa rezerwacja transportu tego samego dnia.</p>
+					<p class="address-note">Polska i Czechy, trasy do około 200 km.</p>
 				</aside>
 			</section>
 		</main>
 
 		<footer class="site-footer">
-			<p>&copy; 2026 TransRent Auto. Arenda aut do transportu.</p>
-			<a href="#start">Powrot na gore</a>
+			<p>&copy; 2026 MAN &amp; VAN Przeprowadzki.</p>
+			<a href="#start">Powrót na górę</a>
 		</footer>
 	</body>
 </html>
