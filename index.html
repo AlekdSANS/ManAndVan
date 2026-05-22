@@ -40,18 +40,24 @@
 
 				<div class="nav-controls" aria-label="Ustawienia strony">
 					<div class="language-switcher" aria-label="Przełącznik języka">
-						<button type="button" class="active">PL</button>
-						<button type="button">EN</button>
-						<button type="button">RU</button>
-						<button type="button">CZ</button>
+						<input type="radio" name="language" id="lang-pl" checked />
+						<label for="lang-pl">PL</label>
+						<input type="radio" name="language" id="lang-en" />
+						<label for="lang-en">EN</label>
+						<input type="radio" name="language" id="lang-ru" />
+						<label for="lang-ru">RU</label>
+						<input type="radio" name="language" id="lang-cz" />
+						<label for="lang-cz">CZ</label>
 					</div>
-					<button
-						class="theme-toggle"
-						type="button"
+					<input
+						class="theme-checkbox"
+						type="checkbox"
+						id="theme-toggle"
 						aria-label="Przełącznik trybu jasnego i ciemnego"
-					>
+					/>
+					<label class="theme-toggle" for="theme-toggle">
 						<span></span>
-					</button>
+					</label>
 				</div>
 			</nav>
 		</header>
@@ -66,9 +72,9 @@
 					</h1>
 					<p class="hero-subtitle">Na terenie Polski i Czech</p>
 					<p class="hero-text">
-						Transport mebli i rzeczy prywatnych oraz firmowych. Bezpiecznie,
-						na czas i z elastycznym terminem, także z możliwością rezerwacji
-						tego samego dnia.
+						Transport mebli i rzeczy prywatnych oraz firmowych. Bezpiecznie, na
+						czas i z elastycznym terminem, także z możliwością rezerwacji tego
+						samego dnia.
 					</p>
 					<div class="hero-actions">
 						<a class="btn primary" href="tel:+48515472469">Zadzwoń PL</a>
@@ -76,41 +82,27 @@
 					</div>
 				</div>
 
-				<div class="hero-visual" aria-label="Wizualizacja auta dostawczego">
-					<div class="payload-badge">
-						<span class="weight-icon"></span>
-						<p>Ładowność</p>
-						<strong>1200 kg</strong>
-					</div>
-					<div class="city-line"></div>
-					<div class="truck">
-						<div class="truck-cab"></div>
-						<div class="truck-box">
-							<strong>MAN &amp; VAN</strong>
-							<span>PRZEPROWADZKI</span>
-							<div class="truck-stripe"></div>
-							<div class="flag-row">
-								<span class="flag flag-pl"></span>
-								<span class="route-arrow">↔</span>
-								<span class="flag flag-cz"></span>
-							</div>
-						</div>
-						<div class="wheel wheel-left"></div>
-						<div class="wheel wheel-right"></div>
-					</div>
-				</div>
+				<div
+					class="hero-visual"
+					aria-label="Wizualizacja auta dostawczego"
+				></div>
 			</section>
 
 			<section class="section service-strip" id="uslugi">
 				<article>
 					<span class="round-icon">▣</span>
 					<h2>Transport mebli i rzeczy</h2>
-					<p>Prywatne i firmowe przeprowadzki, przewóz wyposażenia oraz rzeczy osobistych.</p>
+					<p>
+						Prywatne i firmowe przeprowadzki, przewóz wyposażenia oraz rzeczy
+						osobistych.
+					</p>
 				</article>
 				<article>
 					<span class="round-icon">✓</span>
 					<h2>Bezpiecznie i na czas</h2>
-					<p>Przejrzysta organizacja transportu i punktualna realizacja zlecenia.</p>
+					<p>
+						Przejrzysta organizacja transportu i punktualna realizacja zlecenia.
+					</p>
 				</article>
 				<article>
 					<span class="round-icon">◷</span>
