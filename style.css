@@ -1049,7 +1049,7 @@ h3 {
 	}
 
 	.hero-content strong {
-		font-size: clamp(2.8rem, 5.5vw, 6rem);
+		font-size: clamp(2.6rem, 5.3vw, 5.8rem);
 	}
 
 	.flag {
