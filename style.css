@@ -458,6 +458,9 @@ h3 {
 	border-radius: 6px;
 	background: var(--surface);
 	box-shadow: var(--shadow);
+	background-image: url("./images/a1.jpg");
+	background-size: cover;
+	background-position: 50% 70%;
 }
 
 .hero-visual:hover {
@@ -1063,6 +1066,7 @@ h3 {
 
 	.hero-visual {
 		min-height: 470px;
+		background-position: 10% 70%;
 	}
 
 	.hero-content strong {
