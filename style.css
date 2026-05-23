@@ -592,12 +592,16 @@ h3 {
 .service-strip article:hover .round-icon {
 	background: var(--yellow);
 	color: var(--black);
-	transform: rotate(-6deg) scale(1.06);
+	transform: rotate(-12deg) scale(1.3);
+}
+
+.service-strip article:hover .round-icon svg {
+	color: var(--black);
 }
 
 .round-icon {
-	width: 58px;
-	height: 58px;
+	width: 46px;
+	height: 46px;
 	margin-bottom: 18px;
 	display: grid;
 	place-items: center;
@@ -606,10 +610,29 @@ h3 {
 	color: var(--yellow);
 	font-size: 1.55rem;
 	font-weight: 950;
+	pointer-events: none;
 	transition:
 		background-color 0.22s ease,
 		color 0.22s ease,
 		transform 0.22s ease;
+}
+
+.round-icon svg {
+	width: 100%;
+	height: 100%;
+	color: var(--yellow);
+	transition: color 0.22s ease;
+}
+
+.round-icon svg path,
+.round-icon svg rect,
+.round-icon svg circle,
+.round-icon svg ellipse,
+.round-icon svg polygon,
+.round-icon svg polyline,
+.round-icon svg line {
+	fill: currentColor !important;
+	stroke: currentColor !important;
 }
 
 .service-strip p,
