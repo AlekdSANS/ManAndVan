@@ -8,6 +8,7 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
 		<script src="scripts/icons-anim-box.js" defer></script>
 		<script src="scripts/icons-anim-clock.js" defer></script>
+		<script src="scripts/back-to-top.js" defer></script>
 	</head>
 	<body>
 		<header class="site-header">
@@ -159,7 +160,11 @@
 						</p>
 						<div class="flag-row large">
 							<span class="flag flag-pl"></span>
-							<span class="route-arrow">↔</span>
+							<span class="route-arrow">
+								<svg class="route-arrow-svg" viewBox="0 0 70 65">
+									<use href="./images/arrows.svg"></use>
+								</svg>
+							</span>
 							<span class="flag flag-cz"></span>
 						</div>
 					</div>
@@ -208,7 +213,9 @@
 
 		<footer class="site-footer">
 			<p>&copy; 2026 MAN &amp; VAN Przeprowadzki.</p>
-			<a href="#start">Powrót na górę</a>
 		</footer>
+		<a class="back-to-top" href="#start" aria-label="Powrót na górę">
+			<img src="images/arrow-up.svg" alt="" />
+		</a>
 	</body>
 </html>
