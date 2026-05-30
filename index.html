@@ -18,6 +18,12 @@
 		<script src="scripts/icons-anim-box.js" defer></script>
 		<script src="scripts/icons-anim-clock.js" defer></script>
 		<script src="scripts/back-to-top.js" defer></script>
+		<script src="scripts/map-leafet.js" defer></script>
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+		/>
+		<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 	</head>
 	<body>
 		<header class="site-header">
@@ -81,9 +87,9 @@
 					<p class="eyebrow">Wrocław i okolice</p>
 					<h1>
 						<span>MAN &amp; VAN</span>
-						<strong>Przeprowadzki</strong>
+						<strong>Przeprowadzki I Usługi Transportowe</strong>
 					</h1>
-					<p class="hero-subtitle">Na terenie Polski i Czech</p>
+					<p class="hero-subtitle">Na terenie Polski</p>
 					<p class="hero-text">
 						Transport mebli i rzeczy prywatnych oraz firmowych. Bezpiecznie, na
 						czas i z elastycznym terminem, także z możliwością rezerwacji tego
@@ -91,7 +97,9 @@
 					</p>
 					<div class="hero-actions">
 						<a class="btn primary" href="tel:+48515472469">Zadzwoń PL</a>
-						<a class="btn secondary" href="tel:+420608699300">Zadzwoń CZ</a>
+						<a class="btn secondary" href="mailto:kontakt@man-van.pl"
+							>Napisz e-mail</a
+						>
 					</div>
 				</div>
 
@@ -138,22 +146,22 @@
 			</section>
 
 			<section class="section vehicle-section" id="pojazd">
-				<div class="section-heading">
+				<div class="section-heading vehicle-heading">
 					<p class="eyebrow">Pojazd</p>
-					<h2>Citroën Jumper skrzynia z plandeką</h2>
+					<h2 class="section-title">Citroën Jumper</h2>
 				</div>
 				<div class="spec-grid">
 					<div class="spec-card">
-						<span>Model</span>
-						<strong>Citroën Jumper</strong>
+						<span>Zabudowa</span>
+						<strong>Skrzynia z podestem</strong>
 					</div>
 					<div class="spec-card">
-						<span>Zabudowa</span>
-						<strong>Skrzynia z plandeką</strong>
+						<span>Dodatki</span>
+						<strong>Paleciak i wózek transportowy</strong>
 					</div>
 					<div class="spec-card highlight">
 						<span>Ładowność</span>
-						<strong>1200 kg</strong>
+						<strong>750 kg</strong>
 					</div>
 				</div>
 			</section>
@@ -162,19 +170,12 @@
 				<div class="area-shell">
 					<div class="area-card">
 						<p class="eyebrow">Zasięg transportu</p>
-						<h2>Wrocław i okolice do około 200 km</h2>
-						<p>
-							Obsługujemy przeprowadzki i transport rzeczy na trasach lokalnych
-							oraz między Polską i Czechami.
-						</p>
-						<div class="flag-row large">
-							<span class="flag flag-pl"></span>
-							<span class="route-arrow">
-								<svg class="route-arrow-svg" viewBox="0 0 70 65">
-									<use href="./images/arrows.svg"></use>
-								</svg>
-							</span>
-							<span class="flag flag-cz"></span>
+						<div class="area-description-wrapper">
+							<h2>Wrocław i okolice do około 200 km</h2>
+							<p class="area-description">
+								Obsługujemy przeprowadzki i transport rzeczy na trasach
+								lokalnych oraz krajowych.
+							</p>
 						</div>
 					</div>
 					<div class="language-card">
@@ -201,8 +202,13 @@
 							<a href="tel:+48515472469">+48 515 472 469</a>
 						</div>
 						<div>
-							<h3>Telefon Czechy</h3>
-							<a href="tel:+420608699300">+420 608 699 300</a>
+							<h3>Facebook</h3>
+							<a
+								href="https://www.facebook.com/manvanprzeprowadzki"
+								target="_blank"
+								rel="noopener noreferrer"
+								>facebook.com/ manandvan
+							</a>
 						</div>
 						<div>
 							<h3>E-mail</h3>
@@ -213,9 +219,8 @@
 
 				<aside class="address-card" aria-label="Lokalizacja firmy">
 					<p class="eyebrow">Lokalizacja</p>
-					<h2>Wrocław i okolice</h2>
-					<p>Możliwa rezerwacja transportu tego samego dnia.</p>
-					<p class="address-note">Polska i Czechy, trasy do około 200 km.</p>
+					<div id="map"></div>
+					<p class="address-note">Polska, trasy do około 200 km.</p>
 				</aside>
 			</section>
 		</main>
