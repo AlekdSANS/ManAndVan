@@ -551,9 +551,9 @@ h3 {
 	border-radius: 6px;
 	background: var(--surface);
 	box-shadow: var(--shadow);
-	background-image: url("./images/a1.jpg");
-	background-size: cover;
-	background-position: 50% 70%;
+	background-image: url("./images/truck_photo1.png");
+	background-size: 220%;
+	background-position: 20% 70%;
 }
 
 .hero-visual:hover {
@@ -975,7 +975,7 @@ h3 {
 }
 
 .contact-grid a:hover {
-	color: var(--yellow-dark);
+	color: var(--yellow);
 	transform: translateX(4px);
 }
 
@@ -1214,6 +1214,7 @@ h3 {
 
 	.hero-visual {
 		min-height: 470px;
+		background-size: cover;
 		background-position: 10% 70%;
 	}
 
