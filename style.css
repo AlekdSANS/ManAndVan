@@ -339,7 +339,7 @@ input {
 	transform: translateX(72px);
 }
 
-.language-switcher:has(#lang-cz:checked)::before {
+.language-switcher:has(#lang-uk:checked)::before {
 	transform: translateX(108px);
 }
 
@@ -551,15 +551,121 @@ h3 {
 	border-radius: 6px;
 	background: var(--surface);
 	box-shadow: var(--shadow);
-	background-image: url("./images/truck_photo1.png");
-	background-size: 220%;
-	background-position: 20% 70%;
+	display: grid;
+	grid-template-columns: minmax(0, 1.7fr) minmax(170px, 0.82fr);
+	grid-template-rows: 1fr 1fr auto;
+	gap: 10px;
+	padding: 10px;
 }
 
 .hero-visual:hover {
 	border-color: #ccc;
 	box-shadow: 0 28px 70px rgba(0, 0, 0, 0.18);
 	transform: translateY(-4px);
+}
+
+.gallery-tile {
+	position: relative;
+	min-width: 0;
+	min-height: 0;
+	overflow: hidden;
+	border: 0;
+	border-radius: 5px;
+	background: var(--surface-soft);
+	cursor: pointer;
+}
+
+.gallery-tile-large {
+	grid-row: 1 / 3;
+}
+
+.gallery-tile img {
+	width: 100%;
+	height: 100%;
+	display: block;
+	object-fit: cover;
+	transition:
+		filter 0.25s ease,
+		transform 0.35s ease;
+}
+
+.gallery-tile:hover img,
+.gallery-tile:focus-visible img {
+	filter: brightness(0.92) contrast(1.04);
+	transform: scale(1.045);
+}
+
+.gallery-tile:focus-visible {
+	outline: 3px solid var(--yellow);
+	outline-offset: 3px;
+}
+
+.gallery-hint {
+	grid-column: 1 / -1;
+	margin: 2px 0 0;
+	padding: 8px 10px 2px;
+	color: var(--muted);
+	font-size: 0.9rem;
+	font-weight: 800;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.image-modal {
+	position: fixed;
+	inset: 0;
+	z-index: 100;
+	display: grid;
+	place-items: center;
+	padding: 28px;
+	background: rgba(7, 9, 9, 0.82);
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.22s ease;
+}
+
+.image-modal.is-open {
+	opacity: 1;
+	pointer-events: auto;
+}
+
+.image-modal img {
+	max-width: min(1120px, 94vw);
+	max-height: 86vh;
+	display: block;
+	border-radius: 8px;
+	box-shadow: 0 24px 70px rgba(0, 0, 0, 0.45);
+	object-fit: contain;
+	transform: scale(0.96);
+	transition: transform 0.22s ease;
+}
+
+.image-modal.is-open img {
+	transform: scale(1);
+}
+
+.image-modal-close {
+	position: fixed;
+	top: 22px;
+	right: 22px;
+	z-index: 101;
+	width: 46px;
+	height: 46px;
+	display: grid;
+	place-items: center;
+	border: 1px solid rgba(255, 255, 255, 0.28);
+	border-radius: 50%;
+	background: var(--yellow);
+	color: #070909;
+	font-size: 2rem;
+	font-weight: 900;
+	line-height: 1;
+	cursor: pointer;
+}
+
+.image-modal-close:hover {
+	background: #ffd34a;
+	transform: translateY(-2px);
 }
 
 .service-strip {
@@ -734,7 +840,7 @@ h3 {
 }
 
 .spec-card span {
-	font-size: clamp(0.8rem, 1vw, 0.85rem);
+	font-size: clamp(0.6rem, 1vw, 0.7rem);
 	font-weight: 950;
 	text-transform: uppercase;
 }
@@ -938,7 +1044,7 @@ h3 {
 
 .contact-grid {
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: 1fr;
 	gap: 18px;
 	margin-top: 28px;
 }
@@ -972,7 +1078,7 @@ h3 {
 
 #map {
 	width: 100%;
-	min-height: 260px;
+	min-height: 380px;
 	margin: 18px 0 20px;
 	overflow: hidden;
 	border: 2px solid rgba(0, 0, 0, 0.22);
@@ -1195,8 +1301,6 @@ h3 {
 
 	.hero-visual {
 		min-height: 470px;
-		background-size: cover;
-		background-position: 10% 70%;
 	}
 
 	.hero-content strong {
@@ -1262,7 +1366,7 @@ h3 {
 		transform: translateX(62px);
 	}
 
-	.language-switcher:has(#lang-cz:checked)::before {
+	.language-switcher:has(#lang-uk:checked)::before {
 		transform: translateX(93px);
 	}
 
@@ -1304,6 +1408,32 @@ h3 {
 
 	.hero-visual {
 		min-height: 390px;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1.45fr 0.75fr auto;
+		gap: 8px;
+		padding: 8px;
+	}
+
+	.gallery-tile-large {
+		grid-column: 1 / -1;
+		grid-row: auto;
+	}
+
+	.gallery-hint {
+		font-size: 0.76rem;
+		line-height: 1.3;
+	}
+
+	.image-modal {
+		padding: 14px;
+	}
+
+	.image-modal-close {
+		top: 14px;
+		right: 14px;
+		width: 40px;
+		height: 40px;
+		font-size: 1.65rem;
 	}
 
 	.hero-content strong {

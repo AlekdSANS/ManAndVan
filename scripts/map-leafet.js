@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		return;
 	}
 
-	const coordinates = [51.0121, 17.1725];
+	const coordinates = [51.013144, 17.1752928];
 	const map = L.map(mapElement, {
 		scrollWheelZoom: false,
 	}).setView(coordinates, 15);
@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		maxZoom: 19,
 	}).addTo(map);
 
-	L.marker(coordinates).addTo(map).bindPopup("Kotowicka 2, Groblice");
+	L.marker(coordinates).addTo(map).bindPopup("Kotowicka 4, 55-010 Groblice");
 
 	setTimeout(() => {
 		map.invalidateSize();

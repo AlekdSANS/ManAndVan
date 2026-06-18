@@ -6,7 +6,7 @@
 		<title>MAN &amp; VAN | Przeprowadzki Wrocław</title>
 		<link rel="stylesheet" href="style.css" />
 		<link rel="icon" href="favicon.ico" type="image/x-icon" />
-		<menut
+		<meta
 			name="description"
 			content="Profesjonalne przeprowadzki i transport mebli we Wrocławiu i okolicach. Szybko, bezpiecznie i z elastycznym terminem. Zadzwoń i zarezerwuj już dziś!"
 		/>
@@ -19,6 +19,8 @@
 		<script src="scripts/icons-anim-clock.js" defer></script>
 		<script src="scripts/back-to-top.js" defer></script>
 		<script src="scripts/map-leafet.js" defer></script>
+		<script src="scripts/translations.js" defer></script>
+		<script src="scripts/image-gallery.js" defer></script>
 		<link
 			rel="stylesheet"
 			href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
@@ -65,8 +67,8 @@
 						<label for="lang-en">EN</label>
 						<input type="radio" name="language" id="lang-ru" />
 						<label for="lang-ru">RU</label>
-						<input type="radio" name="language" id="lang-cz" />
-						<label for="lang-cz">CZ</label>
+						<input type="radio" name="language" id="lang-uk" />
+						<label for="lang-uk">UK</label>
 					</div>
 					<input
 						class="theme-checkbox"
@@ -103,10 +105,38 @@
 					</div>
 				</div>
 
-				<div
-					class="hero-visual"
-					aria-label="Wizualizacja auta dostawczego"
-				></div>
+				<div class="hero-visual" aria-label="Wizualizacja auta dostawczego">
+					<button
+						class="gallery-tile gallery-tile-large"
+						type="button"
+						data-full-image="images/truck_photo1.png"
+						aria-label="Otwórz większe zdjęcie auta"
+					>
+						<img src="images/truck_photo1.png" alt="Auto dostawcze MAN & VAN" />
+					</button>
+					<button
+						class="gallery-tile"
+						type="button"
+						data-full-image="images/truck_photo2.jpg"
+						aria-label="Otwórz większe zdjęcie auta"
+					>
+						<img src="images/truck_photo2.jpg" alt="Widok auta dostawczego" />
+					</button>
+					<button
+						class="gallery-tile"
+						type="button"
+						data-full-image="images/truck_photo3.jpg"
+						aria-label="Otwórz większe zdjęcie auta"
+					>
+						<img
+							src="images/truck_photo3.jpg"
+							alt="Zdjęcie auta do transportu"
+						/>
+					</button>
+					<p class="gallery-hint">
+						Kliknij zdjęcie, aby zobaczyć większy widok
+					</p>
+				</div>
 			</section>
 
 			<section class="section service-strip" id="uslugi">
@@ -183,8 +213,8 @@
 						<ul>
 							<li>Polsku</li>
 							<li>Angielsku</li>
+							<li>Ukraińsku</li>
 							<li>Rosyjsku</li>
-							<li>Czesku</li>
 						</ul>
 					</div>
 				</div>
@@ -198,13 +228,13 @@
 					</div>
 					<div class="contact-grid">
 						<div>
-							<h3>Telefon Polska</h3>
+							<h3>Telefon</h3>
 							<a href="tel:+48515472469">+48 515 472 469</a>
 						</div>
 						<div>
 							<h3>Facebook</h3>
 							<a
-								href="https://www.facebook.com/manvan"
+								href="https://www.facebook.com/profile.php?id=61563638941966"
 								target="_blank"
 								rel="noopener noreferrer"
 								>facebook.com/ manandvan
@@ -220,7 +250,7 @@
 				<aside class="address-card" aria-label="Lokalizacja firmy">
 					<p class="eyebrow">Lokalizacja</p>
 					<div id="map"></div>
-					<p class="address-note">Polska, Kotowicka 1, 55-010 Radwanice.</p>
+					<p class="address-note">Polska, Kotowicka 4, 55-010 Groblice.</p>
 				</aside>
 			</section>
 		</main>
@@ -231,5 +261,15 @@
 		<a class="back-to-top" href="#start" aria-label="Powrót na górę">
 			<img src="images/arrow-up.svg" alt="" />
 		</a>
+		<div class="image-modal" aria-hidden="true">
+			<button
+				class="image-modal-close"
+				type="button"
+				aria-label="Zamknij podgląd"
+			>
+				×
+			</button>
+			<img src="" alt="" />
+		</div>
 	</body>
 </html>
