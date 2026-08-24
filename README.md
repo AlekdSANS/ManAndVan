@@ -28,6 +28,7 @@ Before the website can be launched, it needs several final adjustments and mater
 - Final testing of the layout, translations, links, and contact actions
 - Hosting, domain configuration, and deployment
 - Final production checks for performance, accessibility, and browser compatibility
+- Some security adjustments
 
 ## Technology
 
