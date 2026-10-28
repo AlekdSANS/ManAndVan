@@ -5,14 +5,14 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>MAN &amp; VAN | Przeprowadzki Wrocław</title>
 		<link rel="stylesheet" href="style.css" />
-		<link rel="icon" href="favicon.ico" type="image/x-icon" />
+		<link rel="icon" href="images/truck1.svg" type="image/svg+xml" />
 		<meta
 			name="description"
 			content="Profesjonalne przeprowadzki i transport mebli we Wrocławiu i okolicach. Szybko, bezpiecznie i z elastycznym terminem. Zadzwoń i zarezerwuj już dziś!"
 		/>
 		<meta
 			name="keywords"
-			content="przeprowadzki Wrocław, transport mebli, przeprowadzki Polska, przeprowadzki Czechy, szybkie przeprowadzki, bezpieczny transport, elastyczne terminy"
+			content="przeprowadzki Wrocław, transport mebli, transport Wrocław i okolice do 50&nbsp;km, bezpieczny transport, elastyczne terminy"
 		/>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
 		<script src="scripts/icons-anim-box.js" defer></script>
@@ -21,6 +21,7 @@
 		<script src="scripts/map-leafet.js" defer></script>
 		<script src="scripts/translations.js" defer></script>
 		<script src="scripts/image-gallery.js" defer></script>
+		<script src="scripts/navigation.js" defer></script>
 		<link
 			rel="stylesheet"
 			href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
@@ -36,30 +37,27 @@
 					<span>VAN</span>
 				</a>
 
-				<input
-					class="nav-toggle"
-					type="checkbox"
+				<button
+					class="nav-toggle-button"
+					type="button"
 					id="nav-toggle"
 					aria-label="Otwórz menu"
-				/>
-				<label
-					class="nav-toggle-button"
-					for="nav-toggle"
-					aria-label="Otwórz menu"
+					aria-expanded="false"
+					aria-controls="nav-links nav-controls"
 				>
-					<span></span>
-					<span></span>
-					<span></span>
-				</label>
+					<span aria-hidden="true"></span>
+					<span aria-hidden="true"></span>
+					<span aria-hidden="true"></span>
+				</button>
 
-				<div class="nav-links">
+				<div class="nav-links" id="nav-links">
 					<a href="#uslugi">Usługi</a>
 					<a href="#pojazd">Pojazd</a>
 					<a href="#zasieg">Zasięg</a>
 					<a href="#kontakt">Kontakt</a>
 				</div>
 
-				<div class="nav-controls" aria-label="Ustawienia strony">
+				<div class="nav-controls" id="nav-controls" aria-label="Ustawienia strony">
 					<div class="language-switcher" aria-label="Przełącznik języka">
 						<input type="radio" name="language" id="lang-pl" checked />
 						<label for="lang-pl">PL</label>
@@ -84,14 +82,23 @@
 		</header>
 
 		<main id="start">
-			<section class="hero section">
+			<section class="hero">
+				<div class="hero-background" aria-hidden="true">
+					<img
+						src="images/vehicle/jumper-front-retouched.jpg"
+						srcset="images/vehicle/jumper-front-retouched-small.jpg 960w, images/vehicle/jumper-front-retouched.jpg 1448w"
+						sizes="100vw"
+						width="1448" height="1086"
+						fetchpriority="high"
+						alt=""
+					/>
+				</div>
 				<div class="hero-content">
-					<p class="eyebrow">Wrocław i okolice</p>
 					<h1>
 						<span>MAN &amp; VAN</span>
 						<strong>Przeprowadzki I Usługi Transportowe</strong>
 					</h1>
-					<p class="hero-subtitle">Na terenie Polski</p>
+					<p class="hero-subtitle">Wrocław i okolice do 50&nbsp;km</p>
 					<p class="hero-text">
 						Transport mebli i rzeczy prywatnych oraz firmowych. Bezpiecznie, na
 						czas i z elastycznym terminem, także z możliwością rezerwacji tego
@@ -99,43 +106,11 @@
 					</p>
 					<div class="hero-actions">
 						<a class="btn primary" href="tel:+48515472469">Zadzwoń</a>
-						<a class="btn secondary" href="mailto:kontakt@man-van.pl"
+						<a class="btn secondary" href="mailto:stan@arch-special.com"
 							>Napisz e-mail</a
 						>
 					</div>
-				</div>
-
-				<div class="hero-visual" aria-label="Wizualizacja auta dostawczego">
-					<button
-						class="gallery-tile gallery-tile-large"
-						type="button"
-						data-full-image="images/truck_photo1.png"
-						aria-label="Otwórz większe zdjęcie auta"
-					>
-						<img src="images/truck_photo1.png" alt="Auto dostawcze MAN & VAN" />
-					</button>
-					<button
-						class="gallery-tile"
-						type="button"
-						data-full-image="images/truck_photo2.jpg"
-						aria-label="Otwórz większe zdjęcie auta"
-					>
-						<img src="images/truck_photo2.jpg" alt="Widok auta dostawczego" />
-					</button>
-					<button
-						class="gallery-tile"
-						type="button"
-						data-full-image="images/truck_photo3.jpg"
-						aria-label="Otwórz większe zdjęcie auta"
-					>
-						<img
-							src="images/truck_photo3.jpg"
-							alt="Zdjęcie auta do transportu"
-						/>
-					</button>
-					<p class="gallery-hint">
-						Kliknij zdjęcie, aby zobaczyć większy widok
-					</p>
+					<a class="gallery-link" href="#galeria"><span class="gallery-link-text">Zobacz nasz pojazd</span><span aria-hidden="true">↗</span></a>
 				</div>
 			</section>
 
@@ -194,6 +169,17 @@
 						<strong>1200 kg</strong>
 					</div>
 				</div>
+				<div class="vehicle-gallery" id="galeria" aria-labelledby="gallery-title">
+					<p class="eyebrow gallery-eyebrow" id="gallery-title">Z bliska</p>
+					<div class="photo-grid">
+						<button class="gallery-tile" type="button" data-photo="front" data-full-image="images/vehicle/jumper-front-retouched.jpg" aria-label="Otwórz większe zdjęcie auta"><img src="images/vehicle/jumper-front-retouched-small.jpg" width="960" height="720" loading="lazy" alt="Citroën Jumper — widok z przodu" /><span class="photo-caption">Gotowy do drogi</span><span class="photo-expand" aria-hidden="true">↗</span></button>
+						<button class="gallery-tile" type="button" data-photo="lift" data-full-image="images/vehicle/jumper-lift-retouched.jpg" aria-label="Otwórz większe zdjęcie auta"><img src="images/vehicle/jumper-lift-retouched-small.jpg" width="960" height="720" loading="lazy" alt="Rozłożona winda załadunkowa" /><span class="photo-caption">Winda załadunkowa</span><span class="photo-expand" aria-hidden="true">↗</span></button>
+						<button class="gallery-tile" type="button" data-photo="cargo" data-full-image="images/vehicle/jumper-cargo-retouched.jpg" aria-label="Otwórz większe zdjęcie auta"><img src="images/vehicle/jumper-cargo-retouched-small.jpg" width="720" height="960" loading="lazy" alt="Wnętrze przestrzeni ładunkowej" /><span class="photo-caption">Przestrzeń na Twoje rzeczy</span><span class="photo-expand" aria-hidden="true">↗</span></button>
+						<button class="gallery-tile" type="button" data-photo="side" data-full-image="images/vehicle/jumper-side-retouched.jpg" aria-label="Otwórz większe zdjęcie auta"><img src="images/vehicle/jumper-side-retouched-small.jpg" width="960" height="720" loading="lazy" alt="Otwarta boczna część zabudowy" /><span class="photo-caption">Wygodny dostęp z boku</span><span class="photo-expand" aria-hidden="true">↗</span></button>
+						<button class="gallery-tile" type="button" data-photo="rear" data-full-image="images/vehicle/jumper-rear-retouched.jpg" aria-label="Otwórz większe zdjęcie auta"><img src="images/vehicle/jumper-rear-retouched-small.jpg" width="960" height="720" loading="lazy" alt="Zamknięta zabudowa — widok z tyłu" /><span class="photo-caption">Zamknięta zabudowa</span><span class="photo-expand" aria-hidden="true">↗</span></button>
+						<button class="gallery-tile" type="button" data-photo="city" data-full-image="images/vehicle/jumper-city-retouched.jpg" aria-label="Otwórz większe zdjęcie auta"><img src="images/vehicle/jumper-city-retouched-small.jpg" width="960" height="720" loading="lazy" alt="Citroën Jumper — widok w mieście" /><span class="photo-caption">Transport w mieście</span><span class="photo-expand" aria-hidden="true">↗</span></button>
+					</div>
+				</div>
 			</section>
 
 			<section class="section area-section" id="zasieg">
@@ -201,10 +187,10 @@
 					<div class="area-card">
 						<p class="eyebrow">Zasięg transportu</p>
 						<div class="area-description-wrapper">
-							<h2>Wrocław i okolice</h2>
+							<h2>Wrocław i okolice do 50&nbsp;km</h2>
 							<p class="area-description">
-								Obsługujemy przeprowadzki i transport rzeczy na trasach
-								lokalnych oraz krajowych. W tym Siechnice, Wrocław, Oława, ...
+								Transport i przeprowadzki we Wrocławiu oraz w promieniu do 50&nbsp;km.
+								Działamy m.in. w Siechnicach, Oławie i Groblicach. Trasę i termin ustalamy indywidualnie.
 							</p>
 						</div>
 					</div>
@@ -261,7 +247,8 @@
 		<a class="back-to-top" href="#start" aria-label="Powrót na górę">
 			<img src="images/arrow-up.svg" alt="" />
 		</a>
-		<div class="image-modal" aria-hidden="true">
+		<dialog class="image-modal" aria-label="Galeria pojazdu">
+			<div class="image-modal-toolbar"><span class="image-modal-counter" aria-live="polite"></span>
 			<button
 				class="image-modal-close"
 				type="button"
@@ -269,7 +256,10 @@
 			>
 				×
 			</button>
-			<img src="" alt="" />
-		</div>
+			</div>
+			<button class="image-modal-prev" type="button" aria-label="Poprzednie zdjęcie">←</button>
+			<figure class="image-modal-figure"><img alt="" /><figcaption class="image-modal-caption" aria-live="polite"></figcaption></figure>
+			<button class="image-modal-next" type="button" aria-label="Następne zdjęcie">→</button>
+		</dialog>
 	</body>
 </html>

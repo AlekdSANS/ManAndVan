@@ -6,13 +6,13 @@ const translations = {
 			"Profesjonalne przeprowadzki i transport mebli we Wrocławiu i okolicach. Szybko, bezpiecznie i z elastycznym terminem.",
 		navAria: "Główna nawigacja",
 		openMenu: "Otwórz menu",
+		closeMenu: "Zamknij menu",
 		settings: "Ustawienia strony",
 		languageSwitcher: "Przełącznik języka",
 		themeSwitcher: "Przełącznik trybu jasnego i ciemnego",
 		nav: ["Usługi", "Pojazd", "Zasięg", "Kontakt"],
-		heroEyebrow: "Wrocław i okolice",
 		heroTitle: "Przeprowadzki i usługi transportowe",
-		heroSubtitle: "Na terenie Polski",
+		heroSubtitle: "Wrocław i okolice do 50\u00a0km",
 		heroText:
 			"Transport mebli i rzeczy prywatnych oraz firmowych. Bezpiecznie, na czas i z elastycznym terminem, także z możliwością rezerwacji tego samego dnia.",
 		call: "Zadzwoń",
@@ -39,9 +39,9 @@ const translations = {
 			{ label: "Ładowność", value: "1200 kg" },
 		],
 		areaEyebrow: "Zasięg transportu",
-		areaTitle: "Wrocław i okolice",
+		areaTitle: "Wrocław i okolice do 50\u00a0km",
 		areaText:
-			"Obsługujemy przeprowadzki i transport rzeczy na trasach lokalnych oraz krajowych. W tym Siechnice, Wrocław, Oława, ...",
+			"Transport i przeprowadzki we Wrocławiu oraz w promieniu do 50\u00a0km. Działamy m.in. w Siechnicach, Oławie i Groblicach. Trasę i termin ustalamy indywidualnie.",
 		languagesEyebrow: "Mówimy po",
 		languages: ["Polsku", "Angielsku", "Ukraińsku", "Rosyjsku"],
 		contactEyebrow: "Kontakt",
@@ -51,7 +51,13 @@ const translations = {
 		addressNote: "Polska, Kotowicka 4, 55-010 Groblice.",
 		footer: "© 2026 MAN & VAN Przeprowadzki.",
 		backToTop: "Powrót na górę",
-		galleryHint: "Kliknij zdjęcie, aby zobaczyć większy widok",
+		galleryEyebrow: "Z bliska",
+		galleryLink: "Zobacz nasz pojazd",
+		galleryLabel: "Galeria pojazdu",
+		galleryPrevious: "Poprzednie zdjęcie",
+		galleryNext: "Następne zdjęcie",
+		photoCaptions: ["Gotowy do drogi", "Winda załadunkowa", "Przestrzeń na Twoje rzeczy", "Wygodny dostęp z boku", "Zamknięta zabudowa", "Transport w mieście"],
+		photoAlts: ["Citroën Jumper — widok z przodu", "Rozłożona winda załadunkowa", "Wnętrze przestrzeni ładunkowej", "Otwarta boczna część zabudowy", "Zamknięta zabudowa — widok z tyłu", "Citroën Jumper — widok w mieście"],
 		galleryOpen: "Otwórz większe zdjęcie auta",
 		galleryClose: "Zamknij podgląd",
 	},
@@ -62,13 +68,13 @@ const translations = {
 			"Professional moving and furniture transport in Wrocław and nearby areas. Fast, safe, and flexible.",
 		navAria: "Main navigation",
 		openMenu: "Open menu",
+		closeMenu: "Close menu",
 		settings: "Page settings",
 		languageSwitcher: "Language switcher",
 		themeSwitcher: "Light and dark mode switcher",
 		nav: ["Services", "Vehicle", "Area", "Contact"],
-		heroEyebrow: "Wrocław and nearby areas",
 		heroTitle: "Moving and transport services",
-		heroSubtitle: "Across Poland",
+		heroSubtitle: "Wrocław and surroundings within 50\u00a0km",
 		heroText:
 			"Transport of furniture and private or business items. Safe, on time, with flexible scheduling and possible same-day booking.",
 		call: "Call",
@@ -95,9 +101,9 @@ const translations = {
 			{ label: "Payload", value: "1200 kg" },
 		],
 		areaEyebrow: "Transport area",
-		areaTitle: "Wrocław and nearby areas",
+		areaTitle: "Wrocław and surroundings within 50\u00a0km",
 		areaText:
-			"We handle moves and goods transport on local and national routes, including Siechnice, Wrocław, Oława, ...",
+			"Moving and transport in Wrocław and within a 50\u00a0km radius, including Siechnice, Oława and Groblice. We arrange the route and date individually.",
 		languagesEyebrow: "We speak",
 		languages: ["Polish", "English", "Ukrainian", "Russian"],
 		contactEyebrow: "Contact",
@@ -107,7 +113,13 @@ const translations = {
 		addressNote: "Poland, Kotowicka 4, 55-010 Groblice.",
 		footer: "© 2026 MAN & VAN Moving Services.",
 		backToTop: "Back to top",
-		galleryHint: "Click an image to see a larger view",
+		galleryEyebrow: "A closer look",
+		galleryLink: "Explore our vehicle",
+		galleryLabel: "Vehicle gallery",
+		galleryPrevious: "Previous photo",
+		galleryNext: "Next photo",
+		photoCaptions: ["Ready for the road", "Loading lift", "Room for your belongings", "Easy side access", "Enclosed box body", "Transport around the city"],
+		photoAlts: ["Citroën Jumper viewed from the front", "Unfolded loading lift", "Inside the cargo compartment", "Open side door of the box body", "Closed box body viewed from the rear", "Citroën Jumper parked in the city"],
 		galleryOpen: "Open a larger vehicle photo",
 		galleryClose: "Close preview",
 	},
@@ -118,13 +130,13 @@ const translations = {
 			"Профессиональные переезды и перевозка мебели во Вроцлаве и окрестностях. Быстро, безопасно и с гибкими сроками.",
 		navAria: "Главная навигация",
 		openMenu: "Открыть меню",
+		closeMenu: "Закрыть меню",
 		settings: "Настройки страницы",
 		languageSwitcher: "Переключатель языка",
 		themeSwitcher: "Переключатель светлого и темного режима",
 		nav: ["Услуги", "Авто", "Зона", "Контакт"],
-		heroEyebrow: "Вроцлав и окрестности",
 		heroTitle: "Переезды и транспортные услуги",
-		heroSubtitle: "По территории Польши",
+		heroSubtitle: "Вроцлав и окрестности до 50\u00a0км",
 		heroText:
 			"Перевозка мебели, личных и рабочих вещей. Безопасно, вовремя, с гибкими сроками и возможностью бронирования в тот же день.",
 		call: "Позвонить",
@@ -151,9 +163,9 @@ const translations = {
 			{ label: "Грузоподъемность", value: "1200 кг" },
 		],
 		areaEyebrow: "Зона перевозок",
-		areaTitle: "Вроцлав и окрестности",
+		areaTitle: "Вроцлав и окрестности до 50\u00a0км",
 		areaText:
-			"Выполняем переезды и перевозку вещей по местным и междугородним маршрутам, включая Сехнице, Вроцлав, Олаву, ...",
+			"Переезды и перевозки во Вроцлаве и в радиусе до 50\u00a0км, включая Сехнице, Олаву и Гроблице. Маршрут и дату согласовываем индивидуально.",
 		languagesEyebrow: "Говорим на",
 		languages: ["Польском", "Английском", "Украинском", "Русском"],
 		contactEyebrow: "Контакт",
@@ -163,7 +175,13 @@ const translations = {
 		addressNote: "Польша, Kotowicka 4, 55-010 Groblice.",
 		footer: "© 2026 MAN & VAN Переезды.",
 		backToTop: "Наверх",
-		galleryHint: "Нажмите на фото, чтобы открыть большой вид",
+		galleryEyebrow: "Ближе к делу",
+		galleryLink: "Посмотреть автомобиль",
+		galleryLabel: "Галерея автомобиля",
+		galleryPrevious: "Предыдущее фото",
+		galleryNext: "Следующее фото",
+		photoCaptions: ["Готов к поездке", "Гидроборт для погрузки", "Место для ваших вещей", "Удобный доступ сбоку", "Закрытый кузов", "Перевозки по городу"],
+		photoAlts: ["Citroën Jumper — вид спереди", "Разложенный гидроборт", "Внутреннее пространство кузова", "Открытая боковая дверь кузова", "Закрытый кузов — вид сзади", "Citroën Jumper на городской стоянке"],
 		galleryOpen: "Открыть большое фото автомобиля",
 		galleryClose: "Закрыть просмотр",
 	},
@@ -174,13 +192,13 @@ const translations = {
 			"Професійні переїзди та перевезення меблів у Вроцлаві й околицях. Швидко, безпечно та з гнучкими термінами.",
 		navAria: "Головна навігація",
 		openMenu: "Відкрити меню",
+		closeMenu: "Закрити меню",
 		settings: "Налаштування сторінки",
 		languageSwitcher: "Перемикач мови",
 		themeSwitcher: "Перемикач світлого і темного режиму",
 		nav: ["Послуги", "Авто", "Зона", "Контакт"],
-		heroEyebrow: "Вроцлав та околиці",
 		heroTitle: "Переїзди та транспортні послуги",
-		heroSubtitle: "На території Польщі",
+		heroSubtitle: "Вроцлав та околиці до 50\u00a0км",
 		heroText:
 			"Перевезення меблів, особистих і робочих речей. Безпечно, вчасно, з гнучкими термінами та можливістю бронювання в той самий день.",
 		call: "Подзвонити",
@@ -207,9 +225,9 @@ const translations = {
 			{ label: "Вантажність", value: "1200 кг" },
 		],
 		areaEyebrow: "Зона перевезень",
-		areaTitle: "Вроцлав та околиці",
+		areaTitle: "Вроцлав та околиці до 50\u00a0км",
 		areaText:
-			"Виконуємо переїзди та перевезення речей місцевими й національними маршрутами, зокрема Сехніце, Вроцлав, Олава, ...",
+			"Переїзди та перевезення у Вроцлаві й у радіусі до 50\u00a0км, зокрема в Сехніце, Олаві та Гробліце. Маршрут і дату узгоджуємо індивідуально.",
 		languagesEyebrow: "Говоримо",
 		languages: ["Польською", "Англійською", "Українською", "Російською"],
 		contactEyebrow: "Контакт",
@@ -219,7 +237,13 @@ const translations = {
 		addressNote: "Польща, Kotowicka 4, 55-010 Groblice.",
 		footer: "© 2026 MAN & VAN Переїзди.",
 		backToTop: "Нагору",
-		galleryHint: "Натисніть на фото, щоб відкрити більший вигляд",
+		galleryEyebrow: "Ближчий погляд",
+		galleryLink: "Переглянути автомобіль",
+		galleryLabel: "Галерея автомобіля",
+		galleryPrevious: "Попереднє фото",
+		galleryNext: "Наступне фото",
+		photoCaptions: ["Готовий до поїздки", "Гідроборт для завантаження", "Місце для ваших речей", "Зручний доступ збоку", "Закритий кузов", "Перевезення містом"],
+		photoAlts: ["Citroën Jumper — вигляд спереду", "Розкладений гідроборт", "Внутрішній простір кузова", "Відчинені бічні двері кузова", "Закритий кузов — вигляд ззаду", "Citroën Jumper на міській стоянці"],
 		galleryOpen: "Відкрити велике фото автомобіля",
 		galleryClose: "Закрити перегляд",
 	},
@@ -227,7 +251,6 @@ const translations = {
 
 const selectors = {
 	navLinks: ".nav-links a",
-	heroEyebrow: ".hero-content .eyebrow",
 	heroTitle: ".hero-content h1 strong",
 	heroSubtitle: ".hero-subtitle",
 	heroText: ".hero-text",
@@ -249,7 +272,6 @@ const selectors = {
 	addressNote: ".address-note",
 	footer: ".site-footer p",
 	backToTop: ".back-to-top",
-	galleryHint: ".gallery-hint",
 };
 
 function setText(selector, value) {
@@ -282,10 +304,12 @@ function applyLanguage(language) {
 	const nav = document.querySelector(".navbar");
 	if (nav) nav.setAttribute("aria-label", t.navAria);
 
-	const navToggle = document.querySelector(".nav-toggle");
 	const navToggleButton = document.querySelector(".nav-toggle-button");
-	if (navToggle) navToggle.setAttribute("aria-label", t.openMenu);
-	if (navToggleButton) navToggleButton.setAttribute("aria-label", t.openMenu);
+	if (navToggleButton) {
+		navToggleButton.dataset.openLabel = t.openMenu;
+		navToggleButton.dataset.closeLabel = t.closeMenu;
+		navToggleButton.setAttribute("aria-label", navToggleButton.getAttribute("aria-expanded") === "true" ? t.closeMenu : t.openMenu);
+	}
 
 	const navControls = document.querySelector(".nav-controls");
 	const languageSwitcher = document.querySelector(".language-switcher");
@@ -297,7 +321,6 @@ function applyLanguage(language) {
 	if (themeToggle) themeToggle.setAttribute("aria-label", t.themeSwitcher);
 
 	setList(selectors.navLinks, t.nav);
-	setText(selectors.heroEyebrow, t.heroEyebrow);
 	setText(selectors.heroTitle, t.heroTitle);
 	setText(selectors.heroSubtitle, t.heroSubtitle);
 	setText(selectors.heroText, t.heroText);
@@ -337,11 +360,20 @@ function applyLanguage(language) {
 	setText(selectors.locationEyebrow, t.locationEyebrow);
 	setText(selectors.addressNote, t.addressNote);
 	setText(selectors.footer, t.footer);
-	setText(selectors.galleryHint, t.galleryHint);
+	setText(".gallery-eyebrow", t.galleryEyebrow);
+	setText(".gallery-link-text", t.galleryLink);
 
-	document.querySelectorAll(".gallery-tile").forEach((tile) => {
-		tile.setAttribute("aria-label", t.galleryOpen);
+	document.querySelectorAll(".photo-grid .gallery-tile").forEach((photo, index) => {
+		photo.querySelector(".photo-caption").textContent = t.photoCaptions[index];
+		document.querySelectorAll(`.gallery-tile[data-photo="${photo.dataset.photo}"]`).forEach((tile) => {
+			tile.querySelector("img").alt = t.photoAlts[index];
+			tile.setAttribute("aria-label", `${t.galleryOpen}: ${t.photoCaptions[index]}`);
+		});
 	});
+	const modal = document.querySelector(".image-modal");
+	if (modal) modal.setAttribute("aria-label", t.galleryLabel);
+	document.querySelector(".image-modal-prev")?.setAttribute("aria-label", t.galleryPrevious);
+	document.querySelector(".image-modal-next")?.setAttribute("aria-label", t.galleryNext);
 
 	const backToTop = document.querySelector(selectors.backToTop);
 	if (backToTop) {
@@ -354,6 +386,7 @@ function applyLanguage(language) {
 	}
 
 	localStorage.setItem("site-language", language);
+	document.dispatchEvent(new CustomEvent("languagechange", { detail: { language } }));
 }
 
 document.addEventListener("DOMContentLoaded", () => {
